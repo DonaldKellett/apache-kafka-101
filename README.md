@@ -1,6 +1,6 @@
 # apache-kafka-101
 
-My solutions to the Apache Kafka 101 hands-on exercises on Confluent Developer
+My solutions to the Apache Kafka 101 hands-on exercises on [Confluent Developer](https://developer.confluent.io/)
 
 ## License
 
