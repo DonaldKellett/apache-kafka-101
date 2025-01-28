@@ -2,11 +2,28 @@
 
 Sample Python producer and consumer based on the Confluent Developer [Apache Kafka 101](https://developer.confluent.io/courses/apache-kafka/events/) course
 
-## The producer
+## Prerequisites
+
+You'll need:
+
+1. Python and Pip installed - we recommend [pyenv](https://github.com/pyenv/pyenv) for managing your Python installations
+1. A Kafka cluster with SASL authentication enabled - get started with Kafka in no time with [Confluent Cloud](https://confluent.cloud/) and receive USD$400 in free credit
+
+## Getting started
+
+Fork and clone this repository and make it your working directory.
+
+Now install the Pip dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### The producer
 
 The producer `producer.py` produces a stream of quotes from Shakespearean classics to the Kafka topic `poems` or another Kafka topic of your choice.
 
-### Environment variables
+#### Environment variables
 
 | Name | Required | Example or default |
 | --- | --- | --- |
@@ -15,9 +32,7 @@ The producer `producer.py` produces a stream of quotes from Shakespearean classi
 | `SASL_PASSWORD` | Y | Confluent API secret |
 | `TOPIC` | - | `poems` |
 
-### Usage
-
-The Kafka cluster must support SASL authentication. The most convenient method to stand up Kafka with SASL authentication enabled is via [Confluent Cloud](https://confluent.cloud/) - sign up for an account and get USD$400 in free credits.
+#### Usage
 
 ```bash
 python producer.py
