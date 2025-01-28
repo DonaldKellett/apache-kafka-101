@@ -40,6 +40,28 @@ python producer.py
 
 Press `Ctrl+C` to stop the producer.
 
+### The consumer
+
+The consumer consumes messages from the Kafka topic `poems` or another Kafka topic of your choice.
+
+#### Environment variables
+
+| Name | Required | Example or default |
+| --- | --- | --- |
+| `BOOTSTRAP_SERVERS` | Y | `kafka:9092` |
+| `SASL_USERNAME` | Y | Confluent API key |
+| `SASL_PASSWORD` | Y | Confluent API secret |
+| `TOPIC` | - | `poems` |
+| `GROUP_ID` | - | `python_kafka101_group_1` |
+
+#### Usage
+
+```bash
+python consumer.py
+```
+
+Press `Ctrl+C` to stop the consumer.
+
 ## License
 
 [Apache 2.0](./LICENSE)

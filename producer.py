@@ -55,11 +55,14 @@ def run_producer(bootstrap_servers, sasl_username, sasl_password, topic):
             print('Message delivery failed: {}'.format(err), file=sys.stderr)
         else:
             print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
-    while True:
-        producer.poll(0)
-        (work, quote) = random_shakespearean_quote()
-        producer.produce(topic, value=quote, key=work, callback=delivery_report)
-        producer.flush()
+    try:
+        while True:
+            producer.poll(0)
+            (work, quote) = random_shakespearean_quote()
+            producer.produce(topic, value=quote, key=work, callback=delivery_report)
+            producer.flush()
+    except KeyboardInterrupt:
+        pass
 
 if __name__ == '__main__':
     bootstrap_servers = os.getenv('BOOTSTRAP_SERVERS')
