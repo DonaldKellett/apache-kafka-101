@@ -1,6 +1,6 @@
 # apache-kafka-101
 
-My solutions to the Apache Kafka 101 hands-on exercises on [Confluent Developer](https://developer.confluent.io/)
+Sample Python producer and consumer based on the Confluent Developer [Apache Kafka 101](https://developer.confluent.io/courses/apache-kafka/events/) course
 
 ## License
 
